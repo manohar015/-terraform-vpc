@@ -1,3 +1,3 @@
 bucket = "b50-tf-state-bucket"
-key    = "vpc/dev/terrafom.tfstate"
+key    = "vpc/prod/terrafom.tfstate"
 region = "us-east-1"
