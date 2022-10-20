@@ -1,14 +1,12 @@
 pipeline {
     agent any    
     parameters {
-         choice(name: 'ENV', choices: ['dev', 'prod'], description: '') 
-        // choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-        // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+         choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Chose Environment') 
     }
     stages {
-        stage('Hai') {
+        stage('Terraform Init') {
             steps {
-                sh "echo ${ENV_URL} "  
+                sh "terrafoile -f env-${ENV}/"  
                     
             }
         }
