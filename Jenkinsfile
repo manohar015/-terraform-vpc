@@ -7,31 +7,18 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 sh "terrafile -f env-${ENV}/Terrafile"  
-                sh "terraform init -backend-config=env-${ENV}/"
+                sh "terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars"
                     
             }
         }
-        stage('Hello') {
-            when { branch 'master' }
-            environment {
-                ENV_URL = "stage.google.com"
-            }
-            input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                submitter "alice,bob"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                }
-            }
+
+        stage('Terraform Plan') {
             steps {
-                 sh "echo hai"  
-                 sh "echo Environment URL is ${ENV_URL}"
-                 sh "env" 
-                 sh "echo I will be running maven command"
-                 sh "mvn -v"
+                sh "terraform [init] -backend-config=env-${ENV}/${ENV}-backend.tfvars"
+                    
             }
         }
+
     }
 }
 
