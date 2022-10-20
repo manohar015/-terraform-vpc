@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "git::https://github.com/b50-clouddevops/tf-module-vpc.git?ref=vmain"
+  source = ""
 }
 
 # Always the source attribute in terraform module cannot be parameterized.
