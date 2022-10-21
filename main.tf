@@ -4,7 +4,7 @@ module "vpc" {
   ENV                 = var.ENV
   PUBLIC_SUBNET_CIDR  = var.PUBLIC_SUBNET_CIDR
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-  AZ                  = ${}ar.AZ
+  AZ                  = var.AZ
 }
 
 # Always the source attribute in terraform module cannot be parameterized.
