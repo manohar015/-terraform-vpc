@@ -6,6 +6,7 @@ module "vpc" {
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
   AZ                  = var.AZ
   DEFAULT_VPC_ID      = var.DEFAULT_VPC_ID
+  DEFAULT_VPC_CIDR    = var.DEFAULT_VPC_CIDR
 }
 
 # Always the source attribute in terraform module cannot be parameterized.
