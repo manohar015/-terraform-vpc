@@ -7,9 +7,11 @@ module "vpc" {
   AZ                  = var.AZ
   DEFAULT_VPC_ID      = var.DEFAULT_VPC_ID
   DEFAULT_VPC_CIDR    = var.DEFAULT_VPC_CIDR
+  DEFAULT_VPC_RT      = var.DEFAULT_VPC_RT
 }
 
 # Always the source attribute in terraform module cannot be parameterized.
 
 # if it cannot be handled or paramterize the source, how are we going to tell, fetch from x branch and  when branches are dynamic
 
+variable "DEFAULT_VPC_RT" {}
