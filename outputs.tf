@@ -29,3 +29,25 @@ output "DEFAULT_VPC_ID" {
 output "DEFAULT_VPC_CIDR" {
     value = module.vpc.DEFAULT_VPC_CIDR
 }
+
+output "DEFAULT_VPC_CIDR" {
+    value = module.vpc.DEFAULT_VPC_CIDR
+}
+
+output "DEFAULT_VPC_CIDR" {
+    value = module.vpc.DEFAULT_VPC_CIDR
+}
+
+output "DEFAULT_VPC_CIDR" {
+    value = module.vpc.DEFAULT_VPC_CIDR
+}
+
+output "DEFAULT_VPC_CIDR" {
+    value = module.vpc.DEFAULT_VPC_CIDR
+}
+
+
+variable "PRIVATE_HOSTEDZONE_ID" {}
+variable "PRIVATE_HOSTEDZONE_NAME" {} 
+variable "PUBLIC_HOSTEDZONE_ID"   {}
+variable "PUBLIC_HOSTEDZONE_NAME" {}  
