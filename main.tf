@@ -8,6 +8,7 @@ module "vpc" {
   DEFAULT_VPC_ID      = var.DEFAULT_VPC_ID
   DEFAULT_VPC_CIDR    = var.DEFAULT_VPC_CIDR
   DEFAULT_VPC_RT      = var.DEFAULT_VPC_RT
+  Z04602961I29SHWLCRCU3
 }
 
 # Always the source attribute in terraform module cannot be parameterized.
