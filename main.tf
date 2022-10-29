@@ -9,12 +9,11 @@ module "vpc" {
   DEFAULT_VPC_CIDR      = var.DEFAULT_VPC_CIDR
   DEFAULT_VPC_RT        = var.DEFAULT_VPC_RT
   PRIVATE_HOSTEDZONE_ID = var.PRIVATE_HOSTEDZONE_ID
+  PRIVATE_HOSTEDZONE_NAME = var.PRIVATE_HOSTEDZONE_NAME 
+  PUBLIC_HOSTEDZONE_ID    = var.PUBLIC_HOSTEDZONE_ID
+  PUBLIC_HOSTEDZONE_NAME  = var.PUBLIC_HOSTEDZONE_NAME
 
-variable "PRIVATE_HOSTEDZONE_ID" {}
-variable "PRIVATE_HOSTEDZONE_NAME" {} 
-variable "PUBLIC_HOSTEDZONE_ID"   {}
-variable "PUBLIC_HOSTEDZONE_NAME" {}  
-  
+
 }
 
 # Always the source attribute in terraform module cannot be parameterized.
